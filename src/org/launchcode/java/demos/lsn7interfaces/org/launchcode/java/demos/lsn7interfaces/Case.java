@@ -6,6 +6,7 @@ import java.util.Arrays;
 public class Case {
     private ArrayList<Flavor> flavors = new ArrayList<>();
     private ArrayList<Cone> cones = new ArrayList<>();
+    private ArrayList<Topping> toppings = new ArrayList<>();
 
     public Case(){
         Cone cone1 = new Cone("Waffle", 1.25, new ArrayList<>(Arrays.asList( "gluten")));
@@ -27,6 +28,17 @@ public class Case {
         flavors.add(flavor3);
         flavors.add(flavor4);
         flavors.add(flavor5);
+
+        Topping topping = new Topping("Cherry", 0.15, new ArrayList<>(Arrays.asList("red #5")));
+        toppings.add(topping);
+        topping = new Topping("Hot Fudge", 1.55, new ArrayList<>(Arrays.asList("chocolate", "dairy")));
+        toppings.add(topping);
+        topping = new Topping("Marshmello", 1.10, new ArrayList<>(Arrays.asList( "dairy")));
+        toppings.add(topping);
+        topping = new Topping("Carmel", 1.00, new ArrayList<>(Arrays.asList("dairy")));
+        toppings.add(topping);
+        topping = new Topping("Nuts", 0.75, new ArrayList<>(Arrays.asList("nuts")));
+
     }
 
     public ArrayList<Flavor> getFlavors() {
@@ -44,4 +56,6 @@ public class Case {
     public void setCones(ArrayList<Cone> cones) {
         this.cones = cones;
     }
+
+    public ArrayList<Topping> getToppings() { return toppings; }
 }

@@ -9,6 +9,13 @@ public class Cat {
     // The biological family for all cat species
     private String family = "Felidae";
 
+    //constructor
+    public Cat(){
+        // default weight value
+        weight = 13;
+    }
+
+    //constructor
     public Cat (double aWeight) {
         weight = aWeight;
     }
