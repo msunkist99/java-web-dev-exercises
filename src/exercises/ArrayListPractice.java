@@ -65,6 +65,7 @@ public class ArrayListPractice {
         System.out.println("Enter number of characters");
 
         int numberOfCharacters = input.nextInt();
+        input.close();
 
         for (int i = 0 ; i < words.size() ; i++){
             if (words.get(i).length() == numberOfCharacters) {

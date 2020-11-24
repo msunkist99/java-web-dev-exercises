@@ -38,6 +38,7 @@ public class CountCharactersInStringBONUS {
 
         System.out.println("enter your string - ");
         String inputString = input.nextLine().toUpperCase();
+        input.close();
 
         HashMap<String, Integer> characterCounts = new HashMap<>();
         String[] hiddenFiguresArray = inputString.split("");

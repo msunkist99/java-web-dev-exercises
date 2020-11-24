@@ -17,19 +17,17 @@ public class HashMapPractice {
         do{
             System.out.println("Student ID - ");
             studentId = input.nextInt();
+            input.skip("\n");
 
             if (studentId != 0){
                 System.out.println("Student Name - ");
-                String studentName = input.next();
+                String studentName = input.nextLine();
 
                 students.put(studentId, studentName);
             }
-
-
-            // Read in the newline before looping back
-            input.nextLine();
         } while (studentId != 0);
 
+        input.close();
         System.out.println("Class Roster");
 
         for (Map.Entry<Integer,String> student : students.entrySet()) {
