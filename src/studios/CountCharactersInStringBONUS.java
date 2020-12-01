@@ -44,14 +44,23 @@ public class CountCharactersInStringBONUS {
         String[] hiddenFiguresArray = inputString.split("");
 
 
-        for (int i = 0 ; i < hiddenFiguresArray.length ; i++) {
-            if (alphaCharacters.contains(hiddenFiguresArray[i].toUpperCase())) {
-                if (characterCounts.containsKey(hiddenFiguresArray[i]) ) {
-                    characterCounts.put(hiddenFiguresArray[i], characterCounts.get(hiddenFiguresArray[i]) + 1);
-                }
-                else {
-                    characterCounts.put(hiddenFiguresArray[i], 1);
-                }
+//        for (int i = 0 ; i < hiddenFiguresArray.length ; i++) {
+//            if (alphaCharacters.contains(hiddenFiguresArray[i].toUpperCase())) {
+//                if (characterCounts.containsKey(hiddenFiguresArray[i]) ) {
+//                    characterCounts.put(hiddenFiguresArray[i], characterCounts.get(hiddenFiguresArray[i]) + 1);
+//                }
+//                else {
+//                    characterCounts.put(hiddenFiguresArray[i], 1);
+//                }
+//            }
+//        }
+
+        for (String character : hiddenFiguresArray) {
+            if (characterCounts.containsKey(character)){
+                characterCounts.put(character, characterCounts.get(character) + 1);
+            }
+            else {
+                characterCounts.put(character, 1);
             }
         }
 
