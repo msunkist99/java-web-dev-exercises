@@ -12,12 +12,21 @@ public class CountCharactersInString {
         HashMap<String, Integer> characterCounts = new HashMap<>();
         String[] hiddenFiguresArray = hiddenFigures.split("");
 
-        for (int i = 0 ; i < hiddenFiguresArray.length ; i++) {
-            if (characterCounts.containsKey(hiddenFiguresArray[i]) ) {
-                characterCounts.put(hiddenFiguresArray[i], characterCounts.get(hiddenFiguresArray[i]) + 1);
+//        for (int i = 0 ; i < hiddenFiguresArray.length ; i++) {
+//            if (characterCounts.containsKey(hiddenFiguresArray[i]) ) {
+//                characterCounts.put(hiddenFiguresArray[i], characterCounts.get(hiddenFiguresArray[i]) + 1);
+//            }
+//            else {
+//                characterCounts.put(hiddenFiguresArray[i], 1);
+//            }
+//        }
+
+        for (String character : hiddenFiguresArray) {
+            if (characterCounts.containsKey(character)){
+                characterCounts.put(character, characterCounts.get(character) + 1);
             }
             else {
-                characterCounts.put(hiddenFiguresArray[i], 1);
+                characterCounts.put(character, 1);
             }
         }
 
